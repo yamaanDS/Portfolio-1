@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Portfolio</title>
+<meta name="description" content="Academic and professional portfolio — Industrial & Production Engineering student, researcher, and supply chain enthusiast." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="navbar">
+  <div class="wrap">
+    <a href="#home" class="brand">
+      <span class="mark js-initials">YN</span>
+      <span class="js-name">Your Name</span>
+    </a>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#activities">Activities</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"></button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#education">Education</a>
+  <a href="#experience">Experience</a>
+  <a href="#activities">Activities</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#publications">Publications</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section id="home" class="hero">
+  <div class="wrap">
+    <div>
+      <div class="hero-eyebrow"><span class="dot"></span>Available for Supply Chain, Logistics, Operations roles</div>
+      <h1 class="js-name">Your Name</h1>
+      <div class="role js-role">Industrial & Production Engineering Student | Supply Chain & Operations | Researcher</div>
+      <p class="tagline js-tagline">Intro text loads from data.js</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a class="btn btn-outline js-cv-link" href="#" target="_blank" rel="noopener">Download CV</a>
+      </div>
+      <div class="hero-social js-social"></div>
+    </div>
+    <div class="hero-photo">
+      <div class="frame reg-frame js-photo"></div>
+      <div class="callout">
+        <span class="mono">FIG. 01</span>
+        <span class="mono">RUET · IPE</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="wrap">
+    <div class="sheet-label"><span class="sheet-no">SHEET 01</span> ABOUT</div>
+    <div class="about-grid">
+      <div class="about-photo reveal">
+        <div class="frame reg-frame js-photo"></div>
+      </div>
+      <div class="about-copy reveal">
+        <h2>About Me</h2>
+        <div class="about-bio" id="aboutBio" style="margin-top:20px;"></div>
+
+        <div class="about-block">
+          <h4>Interests</h4>
+          <div class="tag-row" id="academicInterestTags"></div>
+        </div>
+        <div class="about-block">
+          <h4>Research Interests</h4>
+          <div class="tag-row" id="researchInterestTags"></div>
+        </div>
+        <div class="about-block">
+          <h4>Career Goals</h4>
+          <p id="aboutGoals" style="color:var(--ink-soft);"></p>
+        </div>
+        <p class="philosophy" id="aboutPhilosophy"></p>
+      </div>
+    </div>
+
+    <div class="stats-row reveal">
+      <div class="stat"><div class="num" id="statEducation">—</div><div class="lbl">Education</div></div>
+      <div class="stat"><div class="num" id="statResearch">0</div><div class="lbl">Publications</div></div>
+      <div class="stat"><div class="num" id="statProjects">0</div><div class="lbl">Projects</div></div>
+      <div class="stat"><div class="num" id="statActivities">0</div><div class="lbl">Activities</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDUCATION ============ -->
+<section id="education">
+  <div class="wrap">
+    <div class="sheet-label"><span class="sheet-no">SHEET 02</span> EDUCATION</div>
+    <div class="section-head reveal">
+      <h2>Educational Background</h2>
+      <p class="sub">Degrees, coursework, and institutions.</p>
+    </div>
+    <div class="timeline" id="educationTimeline"></div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience">
+  <div class="wrap">
+    <div class="sheet-label"><span class="sheet-no">SHEET 03</span> EXPERIENCE</div>
+    <div class="section-head reveal">
+      <h2>Professional Experience</h2>
+      <p class="sub">Internships, roles, and responsibilities.</p>
+    </div>
+    <div class="timeline" id="experienceTimeline"></div>
+  </div>
+</section>
+
+<!-- ============ ACTIVITIES ============ -->
+<section id="activities">
+  <div class="wrap">
+    <div class="sheet-label"><span class="sheet-no">SHEET 04</span> ACTIVITIES</div>
+    <div class="section-head reveal">
+      <h2>Extracurricular Activities</h2>
+      <p class="sub">Leadership, event management, and campus involvement — scroll to move through them.</p>
+    </div>
+    <div class="activity-showcase">
+      <div class="activity-list" id="activityList"></div>
+      <div class="activity-sticky">
+        <div class="activity-photo-frame reg-frame" id="activityPhotoFrame"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills">
+  <div class="wrap">
+    <div class="sheet-label"><span class="sheet-no">SHEET 05</span> SKILLS</div>
+    <div class="section-head reveal">
+      <h2>Skills</h2>
+      <p class="sub">Click a skill to see the projects that used it.</p>
+    </div>
+    <div class="skills-grid" id="skillsGrid"></div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects">
+  <div class="wrap">
+    <div class="sheet-label"><span class="sheet-no">SHEET 06</span> PROJECTS</div>
+    <div class="section-head reveal">
+      <h2>Project Portfolio</h2>
+      <p class="sub">Filter by category, or click a project for the full write-up.</p>
+    </div>
+    <div class="filter-row" id="projectFilters"></div>
+    <div class="card-grid" id="projectGrid"></div>
+  </div>
+</section>
+
+<!-- ============ PUBLICATIONS ============ -->
+<section id="publications">
+  <div class="wrap">
+    <div class="sheet-label"><span class="sheet-no">SHEET 07</span> PUBLICATIONS</div>
+    <div class="section-head reveal">
+      <h2>Publications</h2>
+      <p class="sub">Journal and conference work, including papers in progress.</p>
+    </div>
+    <div class="pub-tabs" id="pubTabs"></div>
+    <div class="pub-list" id="pubList"></div>
+  </div>
+</section>
+
+<!-- ============ RESEARCH INTERESTS ============ -->
+<section id="research-interests">
+  <div class="wrap">
+    <div class="sheet-label"><span class="sheet-no">SHEET 08</span> RESEARCH INTERESTS</div>
+    <div class="section-head reveal">
+      <h2>Research Interests</h2>
+    </div>
+    <div class="interest-grid" id="interestGrid"></div>
+  </div>
+</section>
+
+<!-- ============ ACHIEVEMENTS ============ -->
+<section id="achievements">
+  <div class="wrap">
+    <div class="sheet-label"><span class="sheet-no">SHEET 09</span> ACHIEVEMENTS</div>
+    <div class="section-head reveal">
+      <h2>Achievements</h2>
+    </div>
+    <div class="simple-grid" id="achievementGrid"></div>
+  </div>
+</section>
+
+<!-- ============ CERTIFICATIONS ============ -->
+<section id="certifications">
+  <div class="wrap">
+    <div class="sheet-label"><span class="sheet-no">SHEET 10</span> CERTIFICATIONS</div>
+    <div class="section-head reveal">
+      <h2>Certifications</h2>
+    </div>
+    <div class="simple-grid" id="certGrid"></div>
+  </div>
+</section>
+
+<!-- ============ RESUME ============ -->
+<section id="resume">
+  <div class="wrap">
+    <div class="sheet-label"><span class="sheet-no">SHEET 11</span> RESUME</div>
+    <div class="section-head reveal">
+      <h2>Resume</h2>
+      <p class="sub">A summarized view — download the full CV as a PDF below.</p>
+    </div>
+    <div class="resume-grid">
+      <div class="resume-col"><h4>Education</h4><div id="resumeEducation"></div></div>
+      <div class="resume-col"><h4>Experience</h4><div id="resumeExperience"></div></div>
+      <div class="resume-col"><h4>Publications</h4><div id="resumePublications"></div></div>
+      <div class="resume-col"><h4>Projects</h4><div id="resumeProjects"></div></div>
+      <div class="resume-col"><h4>Activities</h4><div id="resumeActivities"></div></div>
+      <div class="resume-col"><h4>Skills</h4><div id="resumeSkills"></div></div>
+    </div>
+    <div class="resume-download">
+      <a class="btn btn-primary js-cv-link" href="#" target="_blank" rel="noopener">Download CV (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="wrap">
+    <div class="sheet-label"><span class="sheet-no">SHEET 12</span> CONTACT</div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <h2>Let's Connect</h2>
+        <p style="margin-top:16px; color:var(--ink-soft); max-width:40ch;">
+          I am always interested in research collaboration, industrial projects, academic opportunities, and meaningful professional connections.
+        </p>
+        <div class="contact-links" id="contactLinksList"></div>
+      </div>
+      <form class="reveal" id="contactForm">
+        <div class="form-grid">
+          <div class="field"><label for="cf-name">Name</label><input id="cf-name" type="text" required /></div>
+          <div class="field"><label for="cf-email">Email</label><input id="cf-email" type="email" required /></div>
+          <div class="field full"><label for="cf-subject">Subject</label><input id="cf-subject" type="text" /></div>
+          <div class="field full"><label for="cf-message">Message</label><textarea id="cf-message" required></textarea></div>
+        </div>
+        <button class="btn btn-primary" type="submit" style="margin-top:20px;">Send Message</button>
+        <div class="form-status" id="formStatus"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-name js-name">Your Name</div>
+        <div class="footer-dept js-dept">Industrial & Production Engineering</div>
+        <div class="footer-dept js-university">Rajshahi University of Engineering & Technology</div>
+      </div>
+      <div class="footer-social js-social"></div>
+    </div>
+    <div class="copyright">
+      <span>&copy; <span class="js-year"></span> <span class="js-name">Your Name</span>. All rights reserved.</span>
+      <span>Built as a data-driven static site.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
